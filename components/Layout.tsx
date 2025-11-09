@@ -135,13 +135,13 @@ const Layout: React.FC = () => {
     };
 
     return (
-        <div className="bg-gray-900 text-gray-100 font-sans min-h-screen flex flex-col">
+        <div className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-200">
             <Header />
-            <div className="flex-grow max-w-8xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 h-full">
-                    <Sidebar 
-                        activeTab={activeTab} 
-                        setActiveTab={setActiveTab} 
+            <div className="flex-grow max-w-8xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 h-full">
+                    <Sidebar
+                        activeTab={activeTab}
+                        setActiveTab={setActiveTab}
                         isCollapsed={isSidebarCollapsed}
                         setIsCollapsed={setIsSidebarCollapsed}
                     />

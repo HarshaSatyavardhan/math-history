@@ -24,34 +24,40 @@ const tableData = [
 const MainIntroductionSection: React.FC = () => {
     return (
         <section className="mb-16">
-            <div className="space-y-8 text-lg text-gray-300">
-                <div className="bg-gray-800 rounded-lg p-6">
-                    <h2 className="text-3xl font-bold text-white mb-4 border-l-4 border-gray-400 pl-4">The Architecture of Understanding</h2>
-                    <h3 className="text-2xl font-semibold text-white mb-4">Introduction: The Great Convergence: From Clockwork Orbits to Digital Minds</h3>
-                    <p>The history of mathematics is not a simple timeline of discoveries but a narrative of problem-solving. It is a story of how one generation’s concrete challenges—the stability of planets, the flow of heat, the fairness of games—forge the abstract tools and powerful language for the next. The concepts requested, spanning analysis, physics, statistics, and topology, are not a disparate list; they are the architectural blueprints of modern scientific thought.</p>
-                    <p className="mt-4">There is a golden thread connecting an 18th-century physicist's question about the true shape of the Earth to the concept of orthogonality that now underpins all signal processing. The Lagrangian mechanics developed to describe a cannonball's flight is the same framework used to optimize a modern neural network. A 19th-century biologist's attempt to quantify heredity in sweet peas led to the covariance matrices that now drive global financial modeling.</p>
-                    <p className="mt-4">This report traces this convergence. It reveals how the solutions to one set of problems became the foundational language for the next, following the evolution of these ideas from their specific, practical origins to their current status as the universal, abstract machinery of science, engineering, and artificial intelligence.</p>
+            <div className="space-y-6">
+                <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-800/50 rounded-2xl p-8 border border-blue-100 dark:border-gray-700 shadow-sm">
+                    <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+                        The Architecture of Understanding
+                    </h2>
+                    <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
+                        Introduction: The Great Convergence: From Clockwork Orbits to Digital Minds
+                    </h3>
+                    <div className="space-y-4 text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                        <p>The history of mathematics is not a simple timeline of discoveries but a narrative of problem-solving. It is a story of how one generation's concrete challenges—the stability of planets, the flow of heat, the fairness of games—forge the abstract tools and powerful language for the next. The concepts requested, spanning analysis, physics, statistics, and topology, are not a disparate list; they are the architectural blueprints of modern scientific thought.</p>
+                        <p>There is a golden thread connecting an 18th-century physicist's question about the true shape of the Earth to the concept of orthogonality that now underpins all signal processing. The Lagrangian mechanics developed to describe a cannonball's flight is the same framework used to optimize a modern neural network. A 19th-century biologist's attempt to quantify heredity in sweet peas led to the covariance matrices that now drive global financial modeling.</p>
+                        <p>This report traces this convergence. It reveals how the solutions to one set of problems became the foundational language for the next, following the evolution of these ideas from their specific, practical origins to their current status as the universal, abstract machinery of science, engineering, and artificial intelligence.</p>
+                    </div>
                 </div>
 
-                <div className="bg-gray-800 rounded-lg p-6">
-                     <h3 className="text-2xl font-semibold text-white mb-4">A Chronological and Thematic Map of Key Concepts</h3>
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-sm">
+                     <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">A Chronological and Thematic Map of Key Concepts</h3>
                      <div className="overflow-x-auto">
-                        <table className="min-w-full divide-y divide-gray-700">
-                            <thead className="bg-gray-700/50">
+                        <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                            <thead className="bg-gray-50 dark:bg-gray-700/50">
                                 <tr>
-                                    <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6">Concept</th>
-                                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">Key Figure(s)</th>
-                                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">Approx. Date</th>
-                                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">Motivating Problem</th>
+                                    <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 dark:text-white sm:pl-6">Concept</th>
+                                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-white">Key Figure(s)</th>
+                                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-white">Approx. Date</th>
+                                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-white">Motivating Problem</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-gray-700/50 bg-gray-800">
+                            <tbody className="divide-y divide-gray-200 dark:divide-gray-700/50 bg-white dark:bg-gray-800">
                                 {tableData.map((item, index) => (
-                                    <tr key={index}>
-                                        <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-6">{item.concept}</td>
-                                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{item.figures}</td>
-                                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{item.date}</td>
-                                        <td className="px-3 py-4 text-sm text-gray-300 text-wrap">{item.problem}</td>
+                                    <tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors">
+                                        <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 dark:text-white sm:pl-6">{item.concept}</td>
+                                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-600 dark:text-gray-300">{item.figures}</td>
+                                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-600 dark:text-gray-300">{item.date}</td>
+                                        <td className="px-3 py-4 text-sm text-gray-600 dark:text-gray-300 text-wrap">{item.problem}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -59,11 +65,15 @@ const MainIntroductionSection: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="bg-gray-800 rounded-lg p-6">
-                    <h2 className="text-3xl font-bold text-white mb-4">Conclusion: The Great Convergence</h2>
-                    <p>The journey through these concepts reveals a profound truth about intellectual progress. There is no "pure" and "applied" mathematics, only "solved" and "unsolved" problems. The tools forged to solve one generation's most practical challenges—the stability of planets, the flow of heat, the fairness of games, the yield of crops—become the abstract language of the next.</p>
-                    <p className="mt-4">Lagrange's mechanics, born from a desire to unify celestial motion, provides the optimization framework for artificial intelligence. Riemann's geometry, conceived as a "purely mathematical" exploration of n-dimensional space, became the literal fabric of Einstein's universe. Hilbert's "spectral analysis," designed to generalize Fourier series, became the scaffolding for quantum mechanics. And Shannon's engineering problem of "bits in a wire" provided the key—cross-entropy—that unlocks the power of deep learning.</p>
-                    <p className="mt-4">Each concept is a solution, a new lens for seeing the world. Together, they form the grand, interconnected architecture of modern scientific understanding.</p>
+                <div className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-800 dark:to-gray-800/50 rounded-2xl p-8 border border-purple-100 dark:border-gray-700 shadow-sm">
+                    <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-6">
+                        Conclusion: The Great Convergence
+                    </h2>
+                    <div className="space-y-4 text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                        <p>The journey through these concepts reveals a profound truth about intellectual progress. There is no "pure" and "applied" mathematics, only "solved" and "unsolved" problems. The tools forged to solve one generation's most practical challenges—the stability of planets, the flow of heat, the fairness of games, the yield of crops—become the abstract language of the next.</p>
+                        <p>Lagrange's mechanics, born from a desire to unify celestial motion, provides the optimization framework for artificial intelligence. Riemann's geometry, conceived as a "purely mathematical" exploration of n-dimensional space, became the literal fabric of Einstein's universe. Hilbert's "spectral analysis," designed to generalize Fourier series, became the scaffolding for quantum mechanics. And Shannon's engineering problem of "bits in a wire" provided the key—cross-entropy—that unlocks the power of deep learning.</p>
+                        <p>Each concept is a solution, a new lens for seeing the world. Together, they form the grand, interconnected architecture of modern scientific understanding.</p>
+                    </div>
                 </div>
             </div>
         </section>

@@ -57,22 +57,38 @@ const DerivativeVisualizations: React.FC = () => {
 
 const DerivativeSection: React.FC = () => {
     return (
-        <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6 border-l-4 border-cyan-400 pl-4">Problem: The "Change" Problem (Derivatives)</h2>
+        <section className="space-y-6">
+            <div className="border-l-4 border-cyan-500 pl-6">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+                    Problem: The "Change" Problem (Derivatives)
+                </h2>
+            </div>
 
-            <p className="text-lg text-gray-300 mb-6">This is the first big question. The question is: <strong>"How fast is something changing at one specific instant?"</strong></p>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-sm">
+                <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300 mb-4">
+                    This is the first big question. The question is: <strong>"How fast is something changing at one specific instant?"</strong>
+                </p>
 
-            <p className="text-lg text-gray-300 mb-6"><strong>The Analogy:</strong> If you have a graph of your car's <strong>total distance</strong> traveled, how can you find your <strong>exact speed</strong> at 3:00 PM? Finding an "average" speed (e.g., "we traveled 120 miles in 2 hours") is easy. But calculus lets us find the *exact* speed at *one* instant.</p>
+                <div className="bg-cyan-50 dark:bg-cyan-900/20 border-l-4 border-cyan-500 p-4 rounded-r-lg">
+                    <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                        <strong className="text-cyan-700 dark:text-cyan-400">The Analogy:</strong> If you have a graph of your car's <strong>total distance</strong> traveled, how can you find your <strong>exact speed</strong> at 3:00 PM? Finding an "average" speed (e.g., "we traveled 120 miles in 2 hours") is easy. But calculus lets us find the *exact* speed at *one* instant.
+                    </p>
+                </div>
+            </div>
 
-            <div className="bg-gray-800 rounded-lg p-6">
-                <h3 className="text-2xl font-semibold text-white mb-4">The "Aha!" Moment: Zooming In</h3>
-                <p className="text-gray-300 mb-6">The big idea was to "zoom in" closer and closer. They took two points on the curve (two moments in time) and moved them infinitely close together until they essentially became one. The slope of the line connecting them became the *perfect* slope—the instantaneous speed—at that single point.</p>
+            <div className="bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-gray-800 dark:to-gray-800/50 rounded-2xl p-8 border border-cyan-100 dark:border-gray-700 shadow-sm">
+                <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">The "Aha!" Moment: Zooming In</h3>
+                <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300 mb-6">
+                    The big idea was to "zoom in" closer and closer. They took two points on the curve (two moments in time) and moved them infinitely close together until they essentially became one. The slope of the line connecting them became the *perfect* slope—the instantaneous speed—at that single point.
+                </p>
 
                 <DerivativeVisualizations />
 
-                <div className="mt-8 p-6 bg-gradient-to-r from-cyan-900 to-gray-800 rounded-lg">
-                    <h4 className="text-2xl font-bold text-cyan-300">This is the DERIVATIVE</h4>
-                    <p className="text-lg text-cyan-100 mt-2">It's a "machine" (a formula) that takes a "path" function (like position) and gives you a new function for its <strong>instantaneous slope</strong> (like speed).</p>
+                <div className="mt-8 p-6 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl shadow-lg">
+                    <h4 className="text-2xl font-bold text-white">This is the DERIVATIVE</h4>
+                    <p className="text-base text-cyan-50 mt-2">
+                        It's a "machine" (a formula) that takes a "path" function (like position) and gives you a new function for its <strong>instantaneous slope</strong> (like speed).
+                    </p>
                 </div>
             </div>
         </section>

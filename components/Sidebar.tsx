@@ -14,10 +14,10 @@ const NavItem: React.FC<{ tabId: Tab; activeTab: Tab; setActiveTab: (tab: Tab) =
         <li>
             <button
                 onClick={() => setActiveTab(tabId)}
-                className={`w-full flex items-center text-left px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 ${
+                className={`w-full flex items-center text-left px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive
-                        ? 'bg-blue-600 text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-md scale-[1.02]'
+                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700/50 hover:text-gray-900 dark:hover:text-white'
                 }`}
                 title={isCollapsed ? String(children) : ""}
             >
@@ -39,16 +39,16 @@ const CollapsibleSection: React.FC<{ title: string; children: React.ReactNode; i
 
     return (
         <div>
-            <button 
-                onClick={() => setIsOpen(!isOpen)} 
+            <button
+                onClick={() => setIsOpen(!isOpen)}
                 disabled={isCollapsed}
-                className={`w-full flex justify-between items-center px-3 py-2 text-left text-sm font-semibold text-gray-400 rounded-md transition-colors duration-150 ${!isCollapsed ? 'hover:text-white' : 'cursor-default'}`}
+                className={`w-full flex justify-between items-center px-3 py-2 text-left text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 rounded-lg transition-all duration-200 ${!isCollapsed ? 'hover:text-gray-700 dark:hover:text-gray-300' : 'cursor-default'}`}
             >
                 <span className={`transition-opacity duration-200 ${isCollapsed ? 'opacity-0' : 'opacity-100'}`}>{title}</span>
                 <svg className={`w-4 h-4 transform transition-all duration-200 ${isOpen && !isCollapsed ? 'rotate-90' : 'rotate-0'} ${isCollapsed ? 'opacity-0' : 'opacity-100'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
             </button>
             <div className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen && !isCollapsed ? 'max-h-[1000px]' : 'max-h-0'}`}>
-                <ul className="pl-4 border-l border-gray-700 ml-3 space-y-1 mt-1 pt-1">
+                <ul className="pl-4 border-l-2 border-gray-200 dark:border-gray-700 ml-3 space-y-1 mt-1 pt-1">
                     {children}
                 </ul>
             </div>
@@ -60,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, isCollapsed,
     const navItemProps = { activeTab, setActiveTab, isCollapsed };
 
     return (
-        <aside className={`lg:sticky lg:top-24 lg:self-start flex-shrink-0 flex flex-col bg-gray-800/50 p-2 rounded-lg transition-all duration-300 ${isCollapsed ? 'lg:w-20' : 'lg:w-64'}`}>
+        <aside className={`lg:sticky lg:top-20 lg:self-start flex-shrink-0 flex flex-col bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 p-3 rounded-xl shadow-sm transition-all duration-300 ${isCollapsed ? 'lg:w-20' : 'lg:w-72'}`}>
             <nav className="flex-grow space-y-2">
                 <ul className="space-y-1">
                     <NavItem tabId="main-introduction" {...navItemProps} icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>}>Introduction</NavItem>
@@ -125,10 +125,10 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, isCollapsed,
                 </CollapsibleSection>
 
             </nav>
-            <div className="mt-auto border-t border-gray-700 pt-2">
+            <div className="mt-auto border-t border-gray-200 dark:border-gray-700 pt-3">
                 <button
                     onClick={() => setIsCollapsed(!isCollapsed)}
-                    className="w-full flex items-center text-left px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 text-gray-300 hover:bg-gray-700 hover:text-white"
+                    className="w-full flex items-center text-left px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700/50 hover:text-gray-900 dark:hover:text-white"
                 >
                     <span className="w-5 h-5 flex-shrink-0">
                        {isCollapsed ? (
