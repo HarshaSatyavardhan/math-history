@@ -8,7 +8,7 @@ const EigenSection: React.FC = () => {
             <div className="space-y-8 text-lg text-gray-300">
                 <div className="bg-gray-800 rounded-lg p-6">
                     <h3 className="text-2xl font-semibold text-white mb-4">3. The Invariant Directions: Eigenvalues and Eigenvectors</h3>
-                    <p><strong>The Inventor:</strong> The core mathematical idea was first formulated by Augustin-Louis Cauchy in 1829. The concept was independently developed in mechanics to describe principal axes of rotation. The name "eigenvector," from the German <code className="bg-gray-700 p-1 rounded-md text-sm">eigen</code> for "own" or "proper," came much later, likely from the 20th-century school of David Hilbert.</p>
+                    <p><strong>The Inventor:</strong> The core,  mathematical idea was first formulated by Augustin-Louis Cauchy in 1829. The concept was independently developed in mechanics to describe principal axes of rotation. The name "eigenvector," from the German <code className="bg-gray-700 p-1 rounded-md text-sm">eigen</code> for "own" or "proper," came much later, likely from the 20th-century school of David Hilbert.</p>
                 </div>
 
                 <div className="bg-gray-800 rounded-lg p-6">
